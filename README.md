@@ -1,7 +1,6 @@
-# ZeroOneAssembly
-
-
 `ZeroOneAssembly`
+
+
 
 *A collection of Assembly Language codes, ranging from beginner-friendly snippets to advanced low-level programming. This repo covers various assembly concepts, including system calls, arithmetic operations, memory manipulation, and hardware interfacing. Perfect for learning, experimenting, and optimizing code at the bare-metal level.*  
 
