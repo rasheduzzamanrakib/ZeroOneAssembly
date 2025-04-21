@@ -1,0 +1,61 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+    V DW ? 
+    STR1 DB "VALID TRIANGLE $"
+    STR2 DB "INVALID TRIANGLE $"
+ 
+.CODE
+
+MAIN PROC
+    MOV AX, @DATA
+    MOV DS, AX
+    
+    MOV AX, 20    
+    MOV BX, 25    
+    MOV CX, 30      
+    
+    CALL TRIANGLE_CHECK
+    
+    MOV AH, 4CH
+    INT 21H
+
+MAIN ENDP
+
+
+TRIANGLE_CHECK PROC
+
+    MOV V, AX
+    ADD V, BX
+    CMP V, CX
+    JLE INVALID    
+
+
+    MOV V, BX
+    ADD V, CX
+    CMP V, AX
+    JLE INVALID
+
+
+    MOV V, CX
+    ADD V, AX
+    CMP V, BX
+    JLE END_CHECK
+    
+    MOV AH, 9
+    LEA DX, STR1
+    INT 21H
+    JMP END_CHECK
+        
+
+INVALID:
+    MOV AH, 9
+    LEA DX, STR2
+    INT 21H
+
+END_CHECK:
+    RET  
+    
+TRIANGLE_CHECK ENDP
+
+END MAIN
