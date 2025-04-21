@@ -1,0 +1,39 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+
+    EVEN_MSG DB 'AH IS EVEN$'
+    ODD_MSG  DB "AH IS ODD$"
+ 
+.CODE
+MAIN PROC
+    
+    MOV AX, @DATA
+    MOV DS, AX
+    
+    
+    MOV AH, 33
+
+    
+    TEST AH,1
+    JZ DISPLAY_EVEN
+    
+    
+DISPLAY_ODD:
+    MOV AH, 9
+    LEA DX, ODD_MSG
+    INT 21H
+    JMP EXIT
+    
+    
+DISPLAY_EVEN:
+    MOV AH, 9
+    LEA DX, EVEN_MSG
+    INT 21H
+         
+EXIT:
+    MOV AH, 4CH
+    INT 21H
+    
+MAIN ENDP
+END MAIN
