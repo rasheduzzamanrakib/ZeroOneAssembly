@@ -1,0 +1,27 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+.CODE
+
+MAIN PROC
+
+    MOV CL, 1
+    MOV AL, 0
+
+LOOP_SUM:
+    ADD AL, CL
+    INC CL
+    CMP CL, 4
+    JNE LOOP_SUM
+    
+    ADD AL, 30H
+    
+    MOV AH, 2
+    MOV DL, AL
+    INT 21H
+    
+    MOV AH, 4CH
+    INT 21H
+
+MAIN ENDP
+END MAIN
