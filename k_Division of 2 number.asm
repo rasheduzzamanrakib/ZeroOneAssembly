@@ -3,11 +3,12 @@
 .DATA
 .CODE
 
-MAIN PROC
-    MOV AX, 2
-    MOV BX, 4
+MAIN PROC 
     
-    MUL BX
+    MOV AX, 4
+    MOV BX, 2
+    
+    DIV BX
     
     ADD AX, 30H
     MOV DL, AL
