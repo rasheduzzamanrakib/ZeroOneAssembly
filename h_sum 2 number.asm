@@ -1,13 +1,21 @@
+.MODEL SMALL
+.STACK 100H
+.DATA
+.CODE
 
-; You may customize this and other start-up templates; 
-; The location of this template is c:\emu8086\inc\0_com_template.txt
-
-org 100h
-
-; add your code here
-
-ret
-
-
-
-
+MAIN PROC
+    MOV AX, 3
+    MOV BX, 3
+    
+    ADD AX, BX
+    
+    ADD AX, 30H
+    MOV DL, AL
+    
+    MOV AH, 02H
+    INT 21H
+    
+    MOV AH, 4CH
+    INT 21H
+MAIN ENDP
+END MAIN
