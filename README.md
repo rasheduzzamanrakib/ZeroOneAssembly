@@ -87,10 +87,10 @@ By exploring these programs, you will build a strong foundation in:
 
 ## 🧑‍🎓 Student Information
 
-**Name:** Rasheduzzaman Rakib  
-**ID:** CS-D-77-22-120080
-**Course:** CSE 305 Microprocessor, Microcontroller and Assembly Language 
-**Program:** Bachelor of Science in Computer Science  
+**Name:** Rasheduzzaman Rakib   
+**ID:** CS-D-77-22-120080   
+**Course:** CSE 305 Microprocessor, Microcontroller and Assembly Language   
+**Program:** Bachelor of Science in Computer Science   
 **University:** Dhaka International University
 
 ---
